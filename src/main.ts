@@ -11,6 +11,8 @@ WA.onInit().then(() => {
     console.log('Scripting API ready');
     console.log('Player tags: ',WA.player.tags)
 
+    WA.chat.sendChatMessage('Willkommen im Sorgen-Tagebuch Büro!', 'Mr Robot');
+
     WA.room.area.onEnter('tecRoom').subscribe(() => {
         currentPopup = WA.ui.openPopup("tecPopup", "Warum möchtest du denn hier rein?", []);
     })
