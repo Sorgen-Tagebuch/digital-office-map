@@ -13,6 +13,37 @@ WA.onInit().then(() => {
 
     WA.chat.sendChatMessage('Willkommen im Sorgen-Tagebuch Büro! Es gibt verschiedene Bereiche - laufe auf Türen oder Treppen zu, um dich durch das Büro und die Straßen     zu bewegen.', 'Sorgen-Tagebuch Bot');
 
+    // Car 1
+    var carCounter = 0;
+    WA.room.area.onEnter('car1').subscribe(() => {
+        if(carCounter == 0){
+            currentPopup = WA.ui.openPopup("car1Popup", "Vorsicht!", []);
+        }
+        if(carCounter == 1){
+            currentPopup = WA.ui.openPopup("car1Popup", "Pass doch auf!", []);
+        }
+        if(carCounter >= 2){
+            currentPopup = WA.ui.openPopup("car1Popup", "Dass passiert dir öfter, oder?", []);
+        }
+        carCounter++;
+    })
+    WA.room.area.onLeave('car1').subscribe(closePopup)
+
+    // Car 2
+    WA.room.area.onEnter('car2').subscribe(() => {
+        if(carCounter == 0){
+            currentPopup = WA.ui.openPopup("car2Popup", "Vorsicht!", []);
+        }
+        if(carCounter == 1){
+            currentPopup = WA.ui.openPopup("car2Popup", "Pass doch auf!", []);
+        }
+        if(carCounter >= 2){
+            currentPopup = WA.ui.openPopup("car2Popup", "Dass passiert dir öfter, oder?", []);
+        }
+        carCounter++;
+    })
+    WA.room.area.onLeave('car2').subscribe(closePopup)
+
     // Tec room
     WA.room.area.onEnter('tecRoom').subscribe(() => {
         currentPopup = WA.ui.openPopup("tecPopup", "Hier gibt es nichts zu sehen.", []);
