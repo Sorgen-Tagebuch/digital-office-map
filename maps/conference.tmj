@@ -680,20 +680,7 @@
         {
          "columns":4,
          "firstgid":2956,
-         "image":"..\/..\/..\/..\/Downloads\/tagebuch_logo_black 1.png",
-         "imageheight":33,
-         "imagewidth":128,
-         "margin":0,
-         "name":"ST_Logo",
-         "spacing":0,
-         "tilecount":4,
-         "tileheight":32,
-         "tilewidth":32
-        }, 
-        {
-         "columns":4,
-         "firstgid":2960,
-         "image":"..\/..\/..\/..\/Downloads\/tagebuch_logo_black 1.png",
+         "image":"..\/tilesets\/ST_Logo.png",
          "imageheight":33,
          "imagewidth":128,
          "margin":0,
