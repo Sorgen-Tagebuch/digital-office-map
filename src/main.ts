@@ -47,7 +47,7 @@ WA.onInit().then(() => {
 
     // Car 1
     var carCounter = 0;
-    var carMessages = ["Vorsicht, Auto!", "Pass doch auf!", "Dass passiert dir öfter, oder?", "Du wurdest schon vier mal beinahe überfahren!", "Das kann auf Dauer nicht gesund sein!", "Das Krankenhaus wurde noch nicht gebaut!", "..."];
+    var carMessages = ["Vorsicht, Auto!", "Pass doch auf!", "Dass passiert dir öfter, oder?", "Du wurdest schon vier mal beinahe überfahren!", "Das kann auf Dauer nicht gesund sein!", "Wir haben keine Krankenstation im digtialen Büro!", "Du hast offenbar sieben Leben.", "Vorsicht im Straßenverkehr!"];
     WA.room.area.onEnter('car1').subscribe(() => {
         if(carCounter > carMessages.length-1){
             carCounter = carMessages.length-1;
