@@ -13,34 +13,37 @@ WA.onInit().then(() => {
 
     WA.chat.sendChatMessage('Willkommen im Sorgen-Tagebuch Büro! Es gibt verschiedene Bereiche - laufe auf Türen oder Treppen zu, um dich durch das Büro und die Straßen     zu bewegen.', 'Sorgen-Tagebuch Bot');
 
+    // Tec room
     WA.room.area.onEnter('tecRoom').subscribe(() => {
-        currentPopup = WA.ui.openPopup("tecPopup", "Warum möchtest du denn hier rein? Hier gibt es nichts zu sehen.", []);
+        currentPopup = WA.ui.openPopup("tecPopup", "Hier gibt es nichts zu sehen.", []);
     })
     WA.room.area.onLeave('tecRoom').subscribe(closePopup)
 
+    // Market
     WA.room.area.onEnter('market').subscribe(() => {
         currentPopup = WA.ui.openPopup("marketPopup", "Gerade geschlossen.", []);
     })
     WA.room.area.onLeave('market').subscribe(closePopup)
 
-
+    // Road
     WA.room.area.onEnter('roadSign').subscribe(() => {
-        currentPopup = WA.ui.openPopup("roadPopup", "Zum Büro geht es echts entlang, druch die linke Türe.", []);
+        currentPopup = WA.ui.openPopup("roadPopup", "Zum Büro geht es rechts entlang, durch die linke Türe des Gebäudes.", []);
     })
     WA.room.area.onLeave('roadSign').subscribe(closePopup)
 
-
+    // Water tower
     WA.room.area.onEnter('watertower').subscribe(() => {
         currentPopup = WA.ui.openPopup("towerPopup", "Betreten der Plattform verboten.", []);
     })
     WA.room.area.onLeave('watertower').subscribe(closePopup)
 
+    // Danger zone
     WA.room.area.onEnter('dangerZone').subscribe(() => {
         currentPopup = WA.ui.openPopup("dangerPopup", "Was ist hier nur passiert?", []);
     })
     WA.room.area.onLeave('dangerZone').subscribe(closePopup)
 
-
+    // Bus station
     WA.room.area.onEnter('busStation').subscribe(() => {
         const today = new Date();
         const travelTime = new Date(today.getTime() + 60000)
