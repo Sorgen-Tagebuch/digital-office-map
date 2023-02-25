@@ -768,8 +768,17 @@
          "tilewidth":32
         }, 
         {
+         "columns":4,
          "firstgid":2956,
-         "source":"..\/tilesets\/ST_Logo.tsx"
+         "image":"..\/..\/..\/..\/Downloads\/tagebuch_logo_black 1.png",
+         "imageheight":33,
+         "imagewidth":128,
+         "margin":0,
+         "name":"ST_Logo",
+         "spacing":0,
+         "tilecount":4,
+         "tileheight":32,
+         "tilewidth":32
         }],
  "tilewidth":32,
  "type":"map",
