@@ -14,36 +14,38 @@ WA.onInit().then(() => {
     WA.chat.sendChatMessage('Willkommen im Sorgen-Tagebuch Büro! Es gibt verschiedene Bereiche - laufe auf Türen oder Treppen zu, um dich durch das Büro und die Straßen     zu bewegen.', 'Sorgen-Tagebuch Bot');
 
     // Request data from https://www.sorgen-tagebuch.de/api/get/statistics
-    fetch('https://www.sorgen-tagebuch.de/api/get/statistics')
-    .then(response => response.json())
-    .then(data => {
-        console.log(data);
-        // chose one of four options randomly
-        var random = Math.floor(Math.random() * 4);
-        var message = "";
-        switch(random){
-            case 0:
-                message = "Übrigens: Insgesamt wurden "+data['char_total']+" Zeichen im Tagebuch geschrieben.";
-                break;
-            case 1:
-                message = "Übrigens: Insgesamt wurden "+data['word_total']+" Wörter im Tagebuch geschrieben.";
-                break;
-            case 2:
-                message = "Übrigens: Aktuell habt der Sorgen-Tagebuch e.V. "+data['moderators_total']+" Tagebuchautor:innen.";
-                break;
-            case 3:
-                message = "Übrigens: Aktuell wurden im Tagebuch "+data['entries_total']+" Einträge geschrieben.";
-                break;
-            case 4:
-                message = "Übrigens: Aktuell beträgt die durchschnittliche Bewertung durch Nutzer:innen "+data['feedbacks_avg'].toFixed(2);+" Sterne.";
-                break;
-            case 4:
-                message = "Übrigens: Aktuell beträgt die durchschnittliche Antwortzeit "+data['response_avg'].toFixed(2);+" Stunden.";
-                break;
-        }
-        
-        WA.chat.sendChatMessage(message, 'Sorgen-Tagebuch Bot');
-    });
+    window.setTimeout(function(){
+        fetch('https://www.sorgen-tagebuch.de/api/get/statistics')
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            // chose one of four options randomly
+            var random = Math.floor(Math.random() * 6);
+            var message = "";
+            switch(random){
+                case 0:
+                    message = "Übrigens: Insgesamt wurden "+data['char_total'].toLocaleString('de-DE')+" Zeichen im Tagebuch geschrieben.";
+                    break;
+                case 1:
+                    message = "Übrigens: Insgesamt wurden "+data['word_total'].toLocaleString('de-DE')+" Wörter im Tagebuch geschrieben.";
+                    break;
+                case 2:
+                    message = "Übrigens: Aktuell habt der Sorgen-Tagebuch e.V. aktuell "+data['moderators_total']+" Tagebuchautor:innen.";
+                    break;
+                case 3:
+                    message = "Übrigens: Aktuell wurden im Tagebuch "+data['entries_total'].toLocaleString('de-DE')+" Einträge geschrieben.";
+                    break;
+                case 4:
+                    message = "Übrigens: Aktuell beträgt die durchschnittliche Bewertung durch Nutzer:innen "+data['feedbacks_avg'].toLocaleString('de-DE', {maximumFractionDigits: 2})+" Sterne.";
+                    break;
+                case 4:
+                    message = "Übrigens: Aktuell beträgt die durchschnittliche Antwortzeit "+data['response_avg'].toLocaleString('de-DE', {maximumFractionDigits: 2})+" Stunden.";
+                    break;
+            }
+            
+            WA.chat.sendChatMessage(message, 'Sorgen-Tagebuch Bot');
+        });
+    }, 7000);
 
     // Car 1
     var carCounter = 0;
