@@ -36,10 +36,10 @@ WA.onInit().then(() => {
                     message = "Übrigens: Aktuell wurden im Tagebuch "+data['entries_total'].toLocaleString('de-DE')+" Einträge geschrieben.";
                     break;
                 case 4:
-                    message = "Übrigens: Aktuell beträgt die durchschnittliche Bewertung durch Nutzer:innen "+data['feedbacks_avg'].toLocaleString('de-DE', {maximumFractionDigits: 2})+" Sterne.";
+                    message = "Übrigens: Aktuell beträgt die durchschnittliche Bewertung durch Nutzer:innen "+data['feedbacks_avg'].toFixed(2).toLocaleString('de-DE')+" Sterne.";
                     break;
                 case 4:
-                    message = "Übrigens: Aktuell beträgt die durchschnittliche Antwortzeit "+data['response_avg'].toLocaleString('de-DE', {maximumFractionDigits: 2})+" Stunden.";
+                    message = "Übrigens: Aktuell beträgt die durchschnittliche Antwortzeit "+data['response_avg'].toFixed(2).toLocaleString('de-DE')+" Stunden.";
                     break;
             }
             
