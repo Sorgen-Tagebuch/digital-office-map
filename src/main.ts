@@ -25,8 +25,15 @@ WA.onInit().then(() => {
 
 
     WA.room.area.onEnter('roadSign').subscribe(() => {
-        currentPopup = WA.ui.openPopup("roadPopup", "Rechts entlang, zum Sorgen-Tagebuch", []);
+        currentPopup = WA.ui.openPopup("roadPopup", "Zum Büro geht es echts entlang, druch die linke Türe.", []);
     })
+    WA.room.area.onLeave('roadSign').subscribe(closePopup)
+
+
+    WA.room.area.onEnter('watertower').subscribe(() => {
+        currentPopup = WA.ui.openPopup("towerPopup", "Betreten der Plattform verboten.", []);
+    })
+    WA.room.area.onLeave('watertower').subscribe(closePopup)
 
     WA.room.area.onEnter('dangerZone').subscribe(() => {
         currentPopup = WA.ui.openPopup("dangerPopup", "Was ist hier nur passiert?", []);
@@ -37,7 +44,7 @@ WA.onInit().then(() => {
     WA.room.area.onEnter('busStation').subscribe(() => {
         const today = new Date();
         const travelTime = new Date(today.getTime() + 60000)
-        const time = travelTime.getHours() + ":" + travelTime.getMinutes();
+        const time = travelTime.getHours() + ":" + 30*travelTime.getMinutes();
         currentPopup = WA.ui.openPopup("busPopup", "Der nächste Bus kommt um "+time+" Uhr", []);
     })
     WA.room.area.onLeave('busStation').subscribe(closePopup)
