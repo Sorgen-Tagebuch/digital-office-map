@@ -15,6 +15,15 @@ WA.onInit().then(() => {
         currentPopup = WA.ui.openPopup("tecPopup", "Warum möchtest du denn hier rein?", []);
     })
 
+    WA.room.area.onEnter('roadSign').subscribe(() => {
+        currentPopup = WA.ui.openPopup("roadPopup", "Rechts entlang, zum Sorgen-Tagebuch", []);
+    })
+
+    WA.room.area.onEnter('dangerZone').subscribe(() => {
+        currentPopup = WA.ui.openPopup("dangerPopup", "Was ist hier nur passiert?", []);
+    })
+
+
     WA.room.area.onEnter('busStation').subscribe(() => {
         const today = new Date();
         const travelTime = new Date(today.getTime() + 60000)
@@ -23,7 +32,9 @@ WA.onInit().then(() => {
     })
 
     WA.room.area.onLeave('tecRoom').subscribe(closePopup)
-    WA.room.area.onLeave('tecRoom').subscribe(closePopup)
+    WA.room.area.onLeave('busStation').subscribe(closePopup)
+    WA.room.area.onLeave('roadSign').subscribe(closePopup)
+    WA.room.area.onLeave('dangerZone').subscribe(closePopup)
 
     // The line below bootstraps the Scripting API Extra library that adds a number of advanced properties/features to WorkAdventure
     bootstrapExtra().then(() => {
