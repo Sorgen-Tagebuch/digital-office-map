@@ -15,31 +15,22 @@ WA.onInit().then(() => {
 
     // Car 1
     var carCounter = 0;
+    var carMessages = ["Vorsicht, Auto!", "Pass doch auf!", "Dass passiert dir öfter, oder?", "Du wurdest schon vier mal beinahe überfahren!", "Das kann auf Dauer nicht gesund sein!", "Das Krankenhaus wurde noch nicht gebaut!", "..."];
     WA.room.area.onEnter('car1').subscribe(() => {
-        if(carCounter == 0){
-            currentPopup = WA.ui.openPopup("car1Popup", "Vorsicht!", []);
+        if(carCounter > carMessages.length-1){
+            carCounter = carMessages.length-1;
         }
-        if(carCounter == 1){
-            currentPopup = WA.ui.openPopup("car1Popup", "Pass doch auf!", []);
-        }
-        if(carCounter >= 2){
-            currentPopup = WA.ui.openPopup("car1Popup", "Dass passiert dir öfter, oder?", []);
-        }
+        currentPopup = WA.ui.openPopup("car1Popup", carMessages[carCounter], []);
         carCounter++;
     })
     WA.room.area.onLeave('car1').subscribe(closePopup)
 
     // Car 2
     WA.room.area.onEnter('car2').subscribe(() => {
-        if(carCounter == 0){
-            currentPopup = WA.ui.openPopup("car2Popup", "Vorsicht!", []);
+        if(carCounter > carMessages.length-1){
+            carCounter = carMessages.length-1;
         }
-        if(carCounter == 1){
-            currentPopup = WA.ui.openPopup("car2Popup", "Pass doch auf!", []);
-        }
-        if(carCounter >= 2){
-            currentPopup = WA.ui.openPopup("car2Popup", "Dass passiert dir öfter, oder?", []);
-        }
+        currentPopup = WA.ui.openPopup("car2Popup", carMessages[carCounter], []);
         carCounter++;
     })
     WA.room.area.onLeave('car2').subscribe(closePopup)
@@ -77,9 +68,8 @@ WA.onInit().then(() => {
     // Bus station
     WA.room.area.onEnter('busStation').subscribe(() => {
         const today = new Date();
-        const travelTime = new Date(today.getTime() + 60000)
-        const time = travelTime.getHours() + ":" + 30*travelTime.getMinutes();
-        currentPopup = WA.ui.openPopup("busPopup", "Der nächste Bus kommt um "+time+" Uhr", []);
+        const time = today.getHours()-1;
+        currentPopup = WA.ui.openPopup("busPopup", "Der letzte Bus kam um "+time+" Uhr", []);
     })
     WA.room.area.onLeave('busStation').subscribe(closePopup)
 
