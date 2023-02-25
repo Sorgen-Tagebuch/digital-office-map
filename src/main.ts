@@ -11,11 +11,18 @@ WA.onInit().then(() => {
     console.log('Scripting API ready');
     console.log('Player tags: ',WA.player.tags)
 
-    WA.chat.sendChatMessage('Willkommen im Sorgen-Tagebuch Büro!', 'Mr Robot');
+    WA.chat.sendChatMessage('Willkommen im Sorgen-Tagebuch Büro! Es gibt verschiedene Bereiche - laufe auf Türen oder Treppen zu, um dich durch das Büro und die Straßen     zu bewegen.', 'Sorgen-Tagebuch Bot');
 
     WA.room.area.onEnter('tecRoom').subscribe(() => {
-        currentPopup = WA.ui.openPopup("tecPopup", "Warum möchtest du denn hier rein?", []);
+        currentPopup = WA.ui.openPopup("tecPopup", "Warum möchtest du denn hier rein? Hier gibt es nichts zu sehen.", []);
     })
+    WA.room.area.onLeave('tecRoom').subscribe(closePopup)
+
+    WA.room.area.onEnter('market').subscribe(() => {
+        currentPopup = WA.ui.openPopup("marketPopup", "Gerade geschlossen.", []);
+    })
+    WA.room.area.onLeave('market').subscribe(closePopup)
+
 
     WA.room.area.onEnter('roadSign').subscribe(() => {
         currentPopup = WA.ui.openPopup("roadPopup", "Rechts entlang, zum Sorgen-Tagebuch", []);
@@ -24,6 +31,7 @@ WA.onInit().then(() => {
     WA.room.area.onEnter('dangerZone').subscribe(() => {
         currentPopup = WA.ui.openPopup("dangerPopup", "Was ist hier nur passiert?", []);
     })
+    WA.room.area.onLeave('dangerZone').subscribe(closePopup)
 
 
     WA.room.area.onEnter('busStation').subscribe(() => {
@@ -32,11 +40,8 @@ WA.onInit().then(() => {
         const time = travelTime.getHours() + ":" + travelTime.getMinutes();
         currentPopup = WA.ui.openPopup("busPopup", "Der nächste Bus kommt um "+time+" Uhr", []);
     })
-
-    WA.room.area.onLeave('tecRoom').subscribe(closePopup)
     WA.room.area.onLeave('busStation').subscribe(closePopup)
-    WA.room.area.onLeave('roadSign').subscribe(closePopup)
-    WA.room.area.onLeave('dangerZone').subscribe(closePopup)
+
 
     // The line below bootstraps the Scripting API Extra library that adds a number of advanced properties/features to WorkAdventure
     bootstrapExtra().then(() => {
