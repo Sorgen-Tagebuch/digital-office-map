@@ -69,6 +69,12 @@ WA.onInit().then(() => {
     })
     WA.room.area.onLeave('car2').subscribe(closePopup)
 
+     // Office
+     WA.room.area.onEnter('officeArea').subscribe(() => {
+        currentPopup = WA.ui.openPopup("officePopup", "Fragen? Du erreichst Patricia per E-Mail unter lorenzp@sorgen-tagebuch.de, auf Slack als @lorenzp oder Telefonisch unter 07633 80 69 322.", []);
+    })
+    WA.room.area.onLeave('officeArea').subscribe(closePopup)
+
     // Tec room
     WA.room.area.onEnter('tecRoom').subscribe(() => {
         currentPopup = WA.ui.openPopup("tecPopup", "Hier gibt es nichts zu sehen.", []);
