@@ -31,7 +31,7 @@
                  "name":"start",
                  "opacity":1,
                  "type":"tilelayer",
-                 "visible":false,
+                 "visible":true,
                  "width":40,
                  "x":0,
                  "y":0
@@ -68,7 +68,7 @@
                          "value":true
                         }],
                  "type":"tilelayer",
-                 "visible":false,
+                 "visible":true,
                  "width":40,
                  "x":0,
                  "y":0
@@ -185,7 +185,7 @@
          "name":"floor",
          "opacity":1,
          "type":"group",
-         "visible":false,
+         "visible":true,
          "x":0,
          "y":0
         }, 
@@ -218,7 +218,7 @@
                  "name":"Walls",
                  "opacity":1,
                  "type":"tilelayer",
-                 "visible":false,
+                 "visible":true,
                  "width":40,
                  "x":0,
                  "y":0
@@ -249,7 +249,7 @@
                  "name":"Signs",
                  "opacity":1,
                  "type":"tilelayer",
-                 "visible":false,
+                 "visible":true,
                  "width":40,
                  "x":0,
                  "y":0
@@ -257,7 +257,7 @@
          "name":"walls",
          "opacity":1,
          "type":"group",
-         "visible":false,
+         "visible":true,
          "x":0,
          "y":0
         }, 
