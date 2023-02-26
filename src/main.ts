@@ -24,16 +24,16 @@ WA.onInit().then(() => {
             var message = "";
             switch(random){
                 case 0:
-                    message = "Übrigens: Insgesamt wurden "+data['char_total'].toFixed(2).toLocaleString('de-DE')+" Zeichen im Tagebuch geschrieben.";
+                    message = "Übrigens: Insgesamt wurden "+data['char_total'].toLocaleString('de-DE')+" Zeichen im Tagebuch geschrieben.";
                     break;
                 case 1:
-                    message = "Übrigens: Insgesamt wurden "+data['word_total'].toFixed(2).toLocaleString('de-DE')+" Wörter im Tagebuch geschrieben.";
+                    message = "Übrigens: Insgesamt wurden "+data['word_total'].toLocaleString('de-DE')+" Wörter im Tagebuch geschrieben.";
                     break;
                 case 2:
                     message = "Übrigens: Aktuell habt der Sorgen-Tagebuch e.V. aktuell "+data['moderators_total']+" Tagebuchautor:innen.";
                     break;
                 case 3:
-                    message = "Übrigens: Aktuell wurden im Tagebuch "+data['entries_total'].toFixed(2).toLocaleString('de-DE')+" Einträge geschrieben.";
+                    message = "Übrigens: Aktuell wurden im Tagebuch "+data['entries_total'].toLocaleString('de-DE')+" Einträge geschrieben.";
                     break;
                 case 4:
                     message = "Übrigens: Aktuell beträgt die durchschnittliche Bewertung durch Nutzer:innen "+data['feedbacks_avg'].toFixed(2).toLocaleString('de-DE')+" Sterne.";
