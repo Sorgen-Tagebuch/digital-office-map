@@ -38,7 +38,7 @@ WA.onInit().then(() => {
                 case 4:
                     message = "Übrigens: Aktuell beträgt die durchschnittliche Bewertung durch Nutzer:innen "+parseFloat(data['feedbacks_avg']).toLocaleString('de-DE')+" Sterne.";
                     break;
-                case 4:
+                case 5:
                     message = "Übrigens: Aktuell beträgt die durchschnittliche Antwortzeit "+parseFloat(data['response_avg']).toLocaleString('de-DE')+" Stunden.";
                     break;
             }
