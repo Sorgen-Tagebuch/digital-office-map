@@ -11,7 +11,7 @@ WA.onInit().then(() => {
     console.log('Scripting API ready');
     console.log('Player tags: ',WA.player.tags)
 
-    WA.chat.sendChatMessage('Willkommen im Sorgen-Tagebuch Büro!')
+    WA.chat.sendChatMessage('Willkommen im Sorgen-Tagebuch Büro!', 'Sorgen-Tagebuch Bot');
     WA.chat.sendChatMessage('Es gibt verschiedene Bereiche - laufe auf Türen oder Treppen zu, um dich durch das Büro und die Straßen zu bewegen.', 'Sorgen-Tagebuch Bot');
 
     // Request data from https://www.sorgen-tagebuch.de/api/get/statistics
