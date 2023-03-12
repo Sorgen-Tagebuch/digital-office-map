@@ -42,6 +42,8 @@ WA.onInit().then(() => {
                 case 5:
                     message = "Übrigens: Aktuell beträgt die durchschnittliche Antwortzeit "+parseFloat(data['response_avg']).toLocaleString('de-DE')+" Stunden.";
                     break;
+                default:
+                    break;
             }
             
             WA.chat.sendChatMessage(message, 'Sorgen-Tagebuch Bot');
