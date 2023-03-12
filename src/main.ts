@@ -11,7 +11,8 @@ WA.onInit().then(() => {
     console.log('Scripting API ready');
     console.log('Player tags: ',WA.player.tags)
 
-    WA.chat.sendChatMessage('Willkommen im Sorgen-Tagebuch Büro! Es gibt verschiedene Bereiche - laufe auf Türen oder Treppen zu, um dich durch das Büro und die Straßen     zu bewegen.', 'Sorgen-Tagebuch Bot');
+    WA.chat.sendChatMessage('Willkommen im Sorgen-Tagebuch Büro!', 'Sorgen-Tagebuch Bot');
+    WA.chat.sendChatMessage('Es gibt verschiedene Bereiche - laufe auf Türen oder Treppen zu, um dich durch das Büro und die Straßen zu bewegen.', 'Sorgen-Tagebuch Bot');
 
     // Request data from https://www.sorgen-tagebuch.de/api/get/statistics
     window.setTimeout(function(){
@@ -38,7 +39,7 @@ WA.onInit().then(() => {
                 case 4:
                     message = "Übrigens: Aktuell beträgt die durchschnittliche Bewertung durch Nutzer:innen "+parseFloat(data['feedbacks_avg']).toLocaleString('de-DE')+" Sterne.";
                     break;
-                case 4:
+                case 5:
                     message = "Übrigens: Aktuell beträgt die durchschnittliche Antwortzeit "+parseFloat(data['response_avg']).toLocaleString('de-DE')+" Stunden.";
                     break;
             }
@@ -50,6 +51,7 @@ WA.onInit().then(() => {
     // Car 1
     var carCounter = 0;
     var carMessages = ["Vorsicht, Auto!", "Pass doch auf!", "Dass passiert dir öfter, oder?", "Du wurdest schon vier mal beinahe überfahren!", "Das kann auf Dauer nicht gesund sein!", "Wir haben keine Krankenstation im digtialen Büro!", "Du hast offenbar sieben Leben.", "Vorsicht im Straßenverkehr!"];
+    
     WA.room.area.onEnter('car1').subscribe(() => {
         if(carCounter > carMessages.length-1){
             carCounter = carMessages.length-1;
