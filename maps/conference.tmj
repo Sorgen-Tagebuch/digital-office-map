@@ -629,7 +629,7 @@
                 }, 
                 {
                  "class":"area",
-                 "height":480.096951617414,
+                 "height":132.564540679403,
                  "id":34,
                  "name":"office",
                  "properties":[
@@ -655,9 +655,9 @@
                         }],
                  "rotation":0,
                  "visible":true,
-                 "width":358.907429849911,
-                 "x":63.391442155309,
-                 "y":64.3236692458283
+                 "width":351.281326788575,
+                 "x":64.4808854497855,
+                 "y":62.1447826568752
                 }, 
                 {
                  "class":"area",
@@ -685,7 +685,7 @@
                  "class":"",
                  "height":31.4352433985989,
                  "id":40,
-                 "name":"door-library-sign",
+                 "name":"doorLibrarySign",
                  "rotation":0,
                  "visible":true,
                  "width":65.5649362313634,
@@ -696,7 +696,7 @@
                  "class":"area",
                  "height":51.1944958505479,
                  "id":41,
-                 "name":"door-library",
+                 "name":"doorLibrary",
                  "rotation":0,
                  "visible":true,
                  "width":34.1296566014011,
@@ -749,7 +749,7 @@
                 }, 
                 {
                  "class":"area",
-                 "height":244.330759719087,
+                 "height":193.12692487869,
                  "id":47,
                  "name":"meeting",
                  "properties":[
@@ -775,7 +775,7 @@
                         }],
                  "rotation":0,
                  "visible":true,
-                 "width":358.907,
+                 "width":356.728113411047,
                  "x":427.519161148733,
                  "y":60.9296790820165
                 }],
