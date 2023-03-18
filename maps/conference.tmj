@@ -31,7 +31,7 @@
                  "name":"start",
                  "opacity":1,
                  "type":"tilelayer",
-                 "visible":false,
+                 "visible":true,
                  "width":40,
                  "x":0,
                  "y":0
@@ -68,7 +68,7 @@
                          "value":true
                         }],
                  "type":"tilelayer",
-                 "visible":false,
+                 "visible":true,
                  "width":40,
                  "x":0,
                  "y":0
@@ -105,7 +105,7 @@
                          "value":true
                         }],
                  "type":"tilelayer",
-                 "visible":false,
+                 "visible":true,
                  "width":40,
                  "x":0,
                  "y":0
@@ -142,7 +142,7 @@
                          "value":true
                         }],
                  "type":"tilelayer",
-                 "visible":false,
+                 "visible":true,
                  "width":40,
                  "x":0,
                  "y":0
@@ -179,7 +179,7 @@
                          "value":"map.tmj#from-conference"
                         }],
                  "type":"tilelayer",
-                 "visible":false,
+                 "visible":true,
                  "width":40,
                  "x":0,
                  "y":0
@@ -216,7 +216,7 @@
                          "value":"first-floor.tmj#from-conference"
                         }],
                  "type":"tilelayer",
-                 "visible":false,
+                 "visible":true,
                  "width":40,
                  "x":0,
                  "y":0
@@ -253,7 +253,7 @@
                          "value":"basement.tmj#from-conference"
                         }],
                  "type":"tilelayer",
-                 "visible":false,
+                 "visible":true,
                  "width":40,
                  "x":0,
                  "y":0
@@ -284,7 +284,7 @@
                  "name":"collisions",
                  "opacity":1,
                  "type":"tilelayer",
-                 "visible":false,
+                 "visible":true,
                  "width":40,
                  "x":0,
                  "y":0
@@ -333,7 +333,7 @@
          "name":"floor",
          "opacity":1,
          "type":"group",
-         "visible":false,
+         "visible":true,
          "x":0,
          "y":0
         }, 
@@ -405,7 +405,7 @@
          "name":"walls",
          "opacity":1,
          "type":"group",
-         "visible":false,
+         "visible":true,
          "x":0,
          "y":0
         }, 
@@ -754,18 +754,44 @@
                 }, 
                 {
                  "class":"",
-                 "height":218.369739648749,
-                 "id":46,
-                 "name":"office2",
+                 "height":244.330759719087,
+                 "id":47,
+                 "name":"meeting",
+                 "properties":[
+                        {
+                         "name":"focusable",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"jitsiRoom",
+                         "type":"string",
+                         "value":"Meetingroom"
+                        }, 
+                        {
+                         "name":"jitsiTrigger",
+                         "type":"string",
+                         "value":"onaction"
+                        }, 
+                        {
+                         "name":"silent",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"zoom_margin",
+                         "type":"string",
+                         "value":"1,0"
+                        }],
                  "rotation":0,
                  "visible":true,
-                 "width":358.273787706227,
-                 "x":430.229790553486,
-                 "y":66.7730865353912
+                 "width":358.907,
+                 "x":427.519161148733,
+                 "y":60.9296790820165
                 }],
          "opacity":1,
          "type":"objectgroup",
-         "visible":false,
+         "visible":true,
          "x":0,
          "y":0
         }, 
@@ -795,7 +821,7 @@
          "name":"Walls",
          "opacity":1,
          "type":"tilelayer",
-         "visible":false,
+         "visible":true,
          "width":40,
          "x":0,
          "y":0
@@ -826,13 +852,13 @@
          "name":"TopLevel",
          "opacity":1,
          "type":"tilelayer",
-         "visible":false,
+         "visible":true,
          "width":40,
          "x":0,
          "y":0
         }],
  "nextlayerid":87,
- "nextobjectid":47,
+ "nextobjectid":48,
  "orientation":"orthogonal",
  "properties":[
         {
