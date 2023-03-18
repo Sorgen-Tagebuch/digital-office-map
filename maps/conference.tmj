@@ -628,10 +628,10 @@
                  "y":59.8133298277902
                 }, 
                 {
-                 "class":"",
+                 "class":"area",
                  "height":480.096951617414,
                  "id":34,
-                 "name":"",
+                 "name":"office",
                  "properties":[
                         {
                          "name":"focusable",
@@ -649,11 +649,6 @@
                          "value":"onaction"
                         }, 
                         {
-                         "name":"silent",
-                         "type":"bool",
-                         "value":true
-                        }, 
-                        {
                          "name":"zoom_margin",
                          "type":"string",
                          "value":"1,0"
@@ -665,7 +660,7 @@
                  "y":64.3236692458283
                 }, 
                 {
-                 "class":"",
+                 "class":"area",
                  "height":141.698517758926,
                  "id":37,
                  "name":"officeArea",
@@ -698,7 +693,7 @@
                  "y":435.602658523442
                 }, 
                 {
-                 "class":"",
+                 "class":"area",
                  "height":51.1944958505479,
                  "id":41,
                  "name":"door-library",
@@ -720,7 +715,7 @@
                  "y":279.956975684351
                 }, 
                 {
-                 "class":"",
+                 "class":"area",
                  "height":51.1945,
                  "id":43,
                  "name":"door-office",
@@ -742,7 +737,7 @@
                  "y":407.760610786779
                 }, 
                 {
-                 "class":"",
+                 "class":"area",
                  "height":51.1945,
                  "id":45,
                  "name":"door-office2",
@@ -753,7 +748,7 @@
                  "y":459.403648149811
                 }, 
                 {
-                 "class":"",
+                 "class":"area",
                  "height":244.330759719087,
                  "id":47,
                  "name":"meeting",
@@ -772,11 +767,6 @@
                          "name":"jitsiTrigger",
                          "type":"string",
                          "value":"onaction"
-                        }, 
-                        {
-                         "name":"silent",
-                         "type":"bool",
-                         "value":true
                         }, 
                         {
                          "name":"zoom_margin",

@@ -508,7 +508,7 @@
                  "y":307.93575
                 }, 
                 {
-                 "class":"",
+                 "class":"area",
                  "height":51.1945,
                  "id":44,
                  "name":"door-pause",
@@ -530,7 +530,7 @@
                  "y":461.93575
                 }, 
                 {
-                 "class":"",
+                 "class":"area",
                  "height":51.1945,
                  "id":48,
                  "name":"door-it",

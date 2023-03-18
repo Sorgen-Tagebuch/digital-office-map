@@ -79,6 +79,13 @@ WA.onInit().then(() => {
     })
     WA.room.area.onLeave('officeArea').subscribe(closePopup)
 
+    // Library
+    WA.room.area.onEnter('doorLibrary').subscribe(() => {
+        currentPopup = WA.ui.openPopup("doorLibrarySign", "Pssst. In der Bibliothek bitte Ruhe!", []);
+    })
+    WA.room.area.onLeave('doorLibrary').subscribe(closePopup)
+
+
     // Tec room
     WA.room.area.onEnter('tecRoom').subscribe(() => {
         currentPopup = WA.ui.openPopup("tecPopup", "Hier gibt es nichts zu sehen.", []);
