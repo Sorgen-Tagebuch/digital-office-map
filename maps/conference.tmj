@@ -640,14 +640,14 @@
                 }, 
                 {
                  "class":"",
-                 "height":31.4352433985989,
+                 "height":57.5818824660354,
                  "id":40,
                  "name":"doorLibrarySign",
                  "rotation":0,
                  "visible":true,
-                 "width":65.5649362313634,
+                 "width":145.09429672815,
                  "x":1048.14082989043,
-                 "y":435.602658523442
+                 "y":409.456019456005
                 }, 
                 {
                  "class":"area",
@@ -664,7 +664,7 @@
                  "class":"",
                  "height":31.4352,
                  "id":42,
-                 "name":"door-office-sign",
+                 "name":"doorOfficeSign",
                  "rotation":0,
                  "visible":true,
                  "width":65.5649,
@@ -675,7 +675,7 @@
                  "class":"area",
                  "height":51.1945,
                  "id":43,
-                 "name":"door-office",
+                 "name":"doorOffice",
                  "rotation":0,
                  "visible":true,
                  "width":34.1297,
@@ -686,7 +686,7 @@
                  "class":"",
                  "height":31.4352,
                  "id":44,
-                 "name":"door-office2-sign",
+                 "name":"doorOffice2Popup",
                  "rotation":0,
                  "visible":true,
                  "width":65.5649,
@@ -697,7 +697,7 @@
                  "class":"area",
                  "height":51.1945,
                  "id":45,
-                 "name":"door-office2",
+                 "name":"doorOffice2",
                  "rotation":0,
                  "visible":true,
                  "width":34.1297,
@@ -706,7 +706,7 @@
                 }, 
                 {
                  "class":"area",
-                 "height":318.74,
+                 "height":490.872040527291,
                  "id":48,
                  "name":"jitsiChillZone",
                  "properties":[
@@ -732,20 +732,20 @@
                         }],
                  "rotation":0,
                  "visible":true,
-                 "width":346.326,
+                 "width":344.147113411047,
                  "x":67.6039680793115,
                  "y":50.8925558339689
                 }, 
                 {
                  "class":"",
-                 "height":46.1699,
+                 "height":97.3737348403965,
                  "id":49,
                  "name":"officePopup",
                  "rotation":0,
                  "visible":true,
-                 "width":123.59,
-                 "x":512.341616189127,
-                 "y":291.764162103715
+                 "width":204.208803791263,
+                 "x":476.389987471402,
+                 "y":262.349193152849
                 }],
          "opacity":1,
          "type":"objectgroup",
