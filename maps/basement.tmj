@@ -460,7 +460,7 @@
         {
          "draworder":"topdown",
          "id":2,
-         "name":"FloorLevel",
+         "name":"floorLayer",
          "objects":[
                 {
                  "class":"",
