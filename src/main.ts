@@ -85,6 +85,13 @@ WA.onInit().then(() => {
     })
     WA.room.area.onLeave('doorLibrary').subscribe(closePopup)
 
+    // FirstFloor
+    WA.room.area.onEnter('firstFloor').subscribe(() => {
+        currentPopup = WA.ui.openPopup("firstFloorSign", "Im ersten Stock wird noch umgebaut. Komm später wieder.", []);
+    })
+    WA.room.area.onLeave('firstFloor').subscribe(closePopup)
+
+
 
     // Tec room
     WA.room.area.onEnter('tecRoom').subscribe(() => {
