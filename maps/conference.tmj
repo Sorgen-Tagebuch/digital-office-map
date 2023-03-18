@@ -629,38 +629,6 @@
                 }, 
                 {
                  "class":"area",
-                 "height":132.564540679403,
-                 "id":34,
-                 "name":"office",
-                 "properties":[
-                        {
-                         "name":"focusable",
-                         "type":"bool",
-                         "value":true
-                        }, 
-                        {
-                         "name":"jitsiRoom",
-                         "type":"string",
-                         "value":"OfficeMeeting"
-                        }, 
-                        {
-                         "name":"jitsiTrigger",
-                         "type":"string",
-                         "value":"onaction"
-                        }, 
-                        {
-                         "name":"zoom_margin",
-                         "type":"string",
-                         "value":"1,0"
-                        }],
-                 "rotation":0,
-                 "visible":true,
-                 "width":351.281326788575,
-                 "x":64.4808854497855,
-                 "y":62.1447826568752
-                }, 
-                {
-                 "class":"area",
                  "height":141.698517758926,
                  "id":37,
                  "name":"officeArea",
@@ -669,17 +637,6 @@
                  "width":132.376246853734,
                  "x":512.724899785588,
                  "y":359.839656940431
-                }, 
-                {
-                 "class":"",
-                 "height":77.3748485130978,
-                 "id":38,
-                 "name":"officePopup",
-                 "rotation":0,
-                 "visible":true,
-                 "width":119.325067586464,
-                 "x":521.114943600261,
-                 "y":271.278083341102
                 }, 
                 {
                  "class":"",
@@ -749,9 +706,9 @@
                 }, 
                 {
                  "class":"area",
-                 "height":193.12692487869,
-                 "id":47,
-                 "name":"meeting",
+                 "height":318.74,
+                 "id":48,
+                 "name":"jitsiChillZone",
                  "properties":[
                         {
                          "name":"focusable",
@@ -761,7 +718,7 @@
                         {
                          "name":"jitsiRoom",
                          "type":"string",
-                         "value":"Meetingroom"
+                         "value":"ChillZone"
                         }, 
                         {
                          "name":"jitsiTrigger",
@@ -770,14 +727,25 @@
                         }, 
                         {
                          "name":"zoom_margin",
-                         "type":"string",
-                         "value":"1,0"
+                         "type":"float",
+                         "value":1
                         }],
                  "rotation":0,
                  "visible":true,
-                 "width":356.728113411047,
-                 "x":427.519161148733,
-                 "y":60.9296790820165
+                 "width":346.326,
+                 "x":67.6039680793115,
+                 "y":50.8925558339689
+                }, 
+                {
+                 "class":"",
+                 "height":46.1699,
+                 "id":49,
+                 "name":"officePopup",
+                 "rotation":0,
+                 "visible":true,
+                 "width":123.59,
+                 "x":512.341616189127,
+                 "y":291.764162103715
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -848,7 +816,7 @@
          "y":0
         }],
  "nextlayerid":87,
- "nextobjectid":48,
+ "nextobjectid":50,
  "orientation":"orthogonal",
  "properties":[
         {
