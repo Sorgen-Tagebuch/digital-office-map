@@ -718,7 +718,7 @@
                         {
                          "name":"jitsiRoom",
                          "type":"string",
-                         "value":"ChillZone"
+                         "value":"EVM42ChillZone"
                         }, 
                         {
                          "name":"jitsiTrigger",
@@ -761,7 +761,7 @@
                         {
                          "name":"jitsiRoom",
                          "type":"string",
-                         "value":"ChillZone2"
+                         "value":"EVM42ChillZone2"
                         }, 
                         {
                          "name":"jitsiTrigger",
